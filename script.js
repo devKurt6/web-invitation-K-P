@@ -78,49 +78,23 @@ function toggleMusic() {
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("invitation-overlay");
     const openBtn = document.getElementById("open-btn");
+    const loadingMsg = document.getElementById("loading-msg");
 
     // Disable button initially
     openBtn.disabled = true;
     openBtn.style.opacity = "0.6";
     openBtn.style.cursor = "not-allowed";
+    loadingMsg.style.display = "block"; // show loading sign
 
-    // List of background images in CSS we want to wait for
-    const bgImages = [
-        "try.jpg", // hero section background
-        "p&K.jpg"  // mobile hero background
-    ];
-
-    let loadedCount = 0;
-
-    function checkAllLoaded() {
-        if (loadedCount === bgImages.length) {
-            // All background images loaded
-            openBtn.disabled = false;
-            openBtn.style.opacity = "1";
-            openBtn.style.cursor = "pointer";
-        }
-    }
-
-    bgImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
-        img.onload = () => {
-            loadedCount++;
-            checkAllLoaded();
-        };
-        img.onerror = () => {
-            loadedCount++; // still count if failed
-            checkAllLoaded();
-        };
-    });
-
-    // Also wait for normal window load (HTML images, fonts, etc.)
+    // Wait until everything is fully loaded
     window.onload = () => {
-        loadedCount = bgImages.length; // ensure trigger
-        checkAllLoaded();
+        openBtn.disabled = false;
+        openBtn.style.opacity = "1";
+        openBtn.style.cursor = "pointer";
+        loadingMsg.style.display = "none"; // hide loading sign
     };
 
-    // When clicked, fade out overlay & play music
+    // When user clicks after full load
     openBtn.addEventListener("click", () => {
         overlay.classList.add("hidden");
         setTimeout(() => overlay.style.display = "none", 500);

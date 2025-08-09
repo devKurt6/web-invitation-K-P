@@ -109,10 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.classList.add("hidden");
         setTimeout(() => overlay.style.display = "none", 500);
         toggleMusic(); // play music
-        // Redirect after short fade-out
-        setTimeout(() => {
-            window.location.href = "wedding.html";
-        }, 200); // 0.5s to match fade-out
+        
     });
 });
 

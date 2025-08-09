@@ -15,17 +15,47 @@
     <div id="invitation-overlay">
         <div class="overlay-bg fade-in"></div>
         <div class="overlay-content">
-            <h1>Kurt & Paola</h1>
+            <h1 >Kurt & Paola</h1>
             <p>We’re getting married!</p>
             <button id="open-btn">💌 Open Invitation</button>
             <p id="loading-msg">⏳ Please wait, loading...</p>
         </div>
     </div>
+    
+    <header class="navbar">
+        <nav>
+            <div class="nav-container">
+                <div class="brand">
+                    <div class="brand music-control">
+                        <audio id="bgMusic" loop>
+                            <source src="assets/music/You're Still the one.mp3" type="audio/mpeg">
+                        </audio>
+                        <button onclick="toggleMusic()">🔈</button> 💍
+                    </div>
+                </div>
+
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul id="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#countdown">Countdown</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#rsvp">RSVP</a></li>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
 
     
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    
+    <script>
+        AOS.init();
+    </script>
     <script src="script.js"></script>
 
 </body>

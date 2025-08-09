@@ -12,14 +12,14 @@
 </head>
 
 <body>
-    
+
     <div id="flower-container"></div>
     <header class="navbar">
         <nav>
             <div class="nav-container">
                 <div class="brand">
                     <div class="brand music-control">
-                        <audio id="bgMusic" loop>
+                        <audio id="bgMusic" autoplay loop>
                             <source src="assets/music/You're Still the one.mp3" type="audio/mpeg">
                         </audio>
                         <button onclick="toggleMusic()">🔈</button> 💍
@@ -44,14 +44,15 @@
 
 
     <!-- Hero Section with Full Background Image -->
-    <section class="hero-section">
-        <div class="hero-content">
+    <section class="hero-section shake-horizontal">
+        <div class="hero-content shake-horizontal">
             <h1>Kurt & Paola</h1>
             <p>Scroll down to explore</p>
         </div>
     </section>
 
-    
+
+
 
 
     <!-- Content Section 
@@ -63,7 +64,7 @@
 
 
     <section class="hero" id="hero" data-aos="fade-in">
-        <h1>Kurt & Paola</h1>
+        <h1 class="tilt-in-fwd-tr bounce-top">Kurt & Paola</h1>
         <p>We're getting married!</p>
         <h2>August 30, 2025</h2>
     </section>
@@ -73,7 +74,7 @@
 
         <div class="timeline">
             <h3>Our Love Story</h3>
-            <div class="event" data-aos="fade-right">
+            <div class="event puff-out-center" data-aos="fade-right">
                 <h4>How We Met</h4>
                 <p>It all started in college where fate brought us together...</p>
             </div>
@@ -125,6 +126,12 @@
             <img src="p&K.jpg" alt="Photo 3">
         </div>
     </section>
+
+    <section>
+        <img src="cartoon.jpg" alt="Wedding Photo" class="zoom-in" width="400" />
+    </section>
+
+
 
     <section class="rsvp fade-in" id="rsvp">
         <h3>RSVP</h3>

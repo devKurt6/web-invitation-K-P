@@ -78,16 +78,29 @@ function toggleMusic() {
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("invitation-overlay");
     const openBtn = document.getElementById("open-btn");
-    const music = document.getElementById("bgMusic");
 
+    // Disable button initially
+    openBtn.disabled = true;
+    openBtn.style.opacity = "0.6";
+    openBtn.style.cursor = "not-allowed";
+
+    // Wait until everything is fully loaded
+    window.onload = () => {
+        openBtn.disabled = false;
+        openBtn.style.opacity = "1";
+        openBtn.style.cursor = "pointer";
+    };
+
+    // When user clicks after full load
     openBtn.addEventListener("click", () => {
         overlay.classList.add("hidden");
         setTimeout(() => overlay.style.display = "none", 500);
 
-        // Play music
+        // Use your existing toggleMusic function
         toggleMusic();
     });
 });
+
 
 
 

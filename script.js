@@ -160,4 +160,9 @@ setInterval(createFallingFlower, 500); // every 0.5s
 for (let i = 0; i < 10; i++) createFloatingFlower();
 
 
+window.addEventListener("scroll", function () {
+    const hero = document.querySelector(".hero-section");
+    let offset = window.pageYOffset;
+    hero.style.backgroundPositionY = offset * 0.5 + "px";
+});
 

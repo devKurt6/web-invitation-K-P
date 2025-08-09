@@ -80,32 +80,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const openBtn = document.getElementById("open-btn");
     const loadingMsg = document.getElementById("loading-msg");
 
+    let countdown = 3; // seconds
+
     // Disable button initially
     openBtn.disabled = true;
     openBtn.style.opacity = "0.6";
     openBtn.style.cursor = "not-allowed";
-    loadingMsg.style.display = "block"; // show loading sign
 
-    // Wait until everything is fully loaded
-    window.onload = () => {
-        openBtn.disabled = false;
-        openBtn.style.opacity = "1";
-        openBtn.style.cursor = "pointer";
-        loadingMsg.style.display = "none"; // hide loading sign
-    };
+    // Show countdown
+    loadingMsg.textContent = `⏳ Please wait... ${countdown}s`;
 
-    // When user clicks after full load
+    // Countdown timer
+    const timer = setInterval(() => {
+        countdown--;
+        if (countdown > 0) {
+            loadingMsg.textContent = `⏳ Please wait... ${countdown}s`;
+        } else {
+            clearInterval(timer);
+            loadingMsg.style.display = "none";
+            openBtn.disabled = false;
+            openBtn.style.opacity = "1";
+            openBtn.style.cursor = "pointer";
+        }
+    }, 1000);
+
+    // When user clicks after countdown
     openBtn.addEventListener("click", () => {
         overlay.classList.add("hidden");
         setTimeout(() => overlay.style.display = "none", 500);
-        
-
-        // Redirect after short fade-out
-        setTimeout(() => {
-            window.location.href = "home.html";
-        }, 500); // 0.5s to match fade-out
+        toggleMusic(); // play music
     });
 });
+
 
 
 

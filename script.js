@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.classList.add("hidden");
         setTimeout(() => overlay.style.display = "none", 500);
         toggleMusic(); // play music
+        toggleMusic(); // play music
     });
 });
 

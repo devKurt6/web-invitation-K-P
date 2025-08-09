@@ -163,6 +163,6 @@ for (let i = 0; i < 10; i++) createFloatingFlower();
 window.addEventListener("scroll", function () {
     const hero = document.querySelector(".hero-section");
     let offset = window.pageYOffset;
-    hero.style.backgroundPositionY = offset * 0.5 + "px";
+    hero.style.backgroundPositionY = offset * 0.2 + "px";
 });
 

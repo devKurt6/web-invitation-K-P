@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => overlay.style.display = "none", 500);
 
         // Play music
-        music.play().catch(err => console.log("Music play blocked:", err));
+        music.play();
     });
 });
 

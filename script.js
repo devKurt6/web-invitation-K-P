@@ -64,7 +64,7 @@ const countdownFunction = setInterval(function () {
 function toggleMusic() {
   const music = document.getElementById("bgMusic");
   const btn = document.querySelector(".music-control button");
-
+  
   if (music.paused) {
     music.play();
     btn.innerText = "🔈";
@@ -74,6 +74,20 @@ function toggleMusic() {
   }
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("invitation-overlay");
+    const openBtn = document.getElementById("open-btn");
+    const music = document.getElementById("bgMusic");
+
+    openBtn.addEventListener("click", () => {
+        overlay.classList.add("hidden");
+        setTimeout(() => overlay.style.display = "none", 500);
+
+        // Play music
+        music.play().catch(err => console.log("Music play blocked:", err));
+    });
+});
 
 
 

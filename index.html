@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <audio autoplay loop>
-        <source src="assets/music/You're Still the one.mp3" type="audio/mpeg">
-    </audio>
+    
 </head>
 
 <body>
@@ -25,7 +23,34 @@
         </div>
     </div>
     <div id="flower-container"></div>
-    
+    <header class="navbar">
+        <nav>
+            <div class="nav-container">
+                <div class="brand">
+                    <div class="brand music-control">
+                        <audio id="bgMusic" autoplay loop>
+                            <source src="assets/music/You're Still the one.mp3" type="audio/mpeg">
+                        </audio>
+                        <button onclick="toggleMusic()">🔈</button> 💍
+                    </div>
+                </div>
+
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul id="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#countdown">Countdown</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#rsvp">RSVP</a></li>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
 
     <!-- Hero Section with Full Background Image -->
     <section class="hero-section">
@@ -101,7 +126,9 @@
     <section class="gallery fade-in" id="gallery">
         <h3>Photo Memories</h3>
         <div class="photos">
-            
+            <img src="p&K.jpg" alt="Photo 1">
+            <img src="p&K.jpg" alt="Photo 2">
+            <img src="p&K.jpg" alt="Photo 3">
         </div>
     </section>
 

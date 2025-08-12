@@ -855,7 +855,7 @@ footer {
 @media (max-width: 900px) {
 
   .typing {
-    font-size: 2rem;
+    font-size: 1.5rem;
     /* smaller size for tablets & mobile */
   }
 

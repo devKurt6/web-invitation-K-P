@@ -197,13 +197,13 @@ document.addEventListener('click', (e) => {
 setInterval(createFallingFlower, 500); // every 0.5s
 for (let i = 0; i < 10; i++) createFloatingFlower();
 
-
+/************fix scroll in safari*********** */
 window.addEventListener("scroll", function () {
     const hero = document.querySelector(".hero-section");
     let offset = window.pageYOffset;
     hero.style.backgroundPositionY = offset * 0.2 + "px";
 });
-
+/************************** */
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".zoom-in");
 
@@ -218,15 +218,13 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         // Remove animation when hidden (so it can replay)
         entry.target.classList.add("animate-zoom-out");
-        
-        
       }
     });
   }, { threshold: 0.3 }); // Trigger at 20% visibility
 
   images.forEach(img => observer.observe(img));
 });
-
+/********************************************************************** */
 document.addEventListener("DOMContentLoaded", () => {
   const textElements = document.querySelectorAll(".bounce-top");
 
@@ -241,8 +239,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         // Remove animation when hidden (so it can replay)
         entry.target.classList.remove("bounce-top");
-        
-        
       }
     });
   }, { threshold: 0.3 }); // Trigger at 20% visibility
@@ -250,11 +246,33 @@ document.addEventListener("DOMContentLoaded", () => {
   textElements.forEach(txt => observer.observe(txt));
 });
 
+/********************************************************************** */
+document.addEventListener("DOMContentLoaded", () => {
+  const textElements = document.querySelectorAll("typing");
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.remove("typing");
+      
+      if (entry.isIntersecting) {
+        // Add animation when visible
+        
+        entry.target.classList.add("typing");
+      } else {
+        // Remove animation when hidden (so it can replay)
+        entry.target.classList.remove("typing");
+      }
+    });
+  }, { threshold: 0.3 }); // Trigger at 20% visibility
+
+  textElements.forEach(txt => observer.observe(txt));
+});
+
+/************************code for animation Paola & Kurt************************** */
 const textElement = document.querySelector(".typing");
 const resetBtn = document.getElementById("open-btn");
 
-const phrases = ["Hello!","Welcome", "We are getting married", "Paola & Kurt"];
+const phrases = ["Hello!","Welcome", "We're getting married", "Paola & Kurt"];
 let currentPhraseIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;

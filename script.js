@@ -249,3 +249,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
   textElements.forEach(txt => observer.observe(txt));
 });
+
+
+const textElement = document.querySelector(".typing");
+const resetBtn = document.getElementById("open-btn");
+
+const phrases = ["Hello!","Welcome", "We are getting married", "Paola & Kurt"];
+let currentPhraseIndex = 0;
+let currentCharIndex = 0;
+let isDeleting = false;
+let delay = 100;
+let timeoutId;
+
+function type() {
+  let currentPhrase = phrases[currentPhraseIndex];
+  document.getElementById("hide").classList.add("hide");
+  if (isDeleting) {
+    textElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+    currentCharIndex--;
+    delay = 80;
+  } else {
+    textElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+    currentCharIndex++;
+    delay = 100;
+  }
+
+  if (!isDeleting && currentCharIndex === currentPhrase.length) {
+    if (currentPhraseIndex < phrases.length - 1) {
+      delay = 1000;
+      isDeleting = true;
+    } else {
+      document.getElementById("hide").classList.remove("hide");
+      sysmain();
+      
+      return; // Stop completely after last phrase is typed
+    }
+  }
+
+  if (isDeleting && currentCharIndex === 0) {
+    isDeleting = false;
+    currentPhraseIndex++;
+    delay = 500;
+  }
+
+  timeoutId = setTimeout(type, delay);
+}
+
+function resetAnimation() {
+  clearTimeout(timeoutId); // Stop current animation
+  textElement.textContent = ""; // Clear text
+  currentPhraseIndex = 0;
+  currentCharIndex = 0;
+  isDeleting = false;
+  type(); // Restart
+}
+
+resetBtn.addEventListener("click", resetAnimation);
+
+
+
+function sysmain() {
+  const el = document.getElementById("K&P");
+const el2 = document.getElementById("hide");
+  if (el.classList.contains("tracking-in-expand")) {
+    el.classList.remove("tracking-in-expand");
+  } else {
+    el.classList.add("tracking-in-expand");
+    
+  }
+
+}

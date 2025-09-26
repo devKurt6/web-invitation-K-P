@@ -18,7 +18,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Dancing Script', cursive;
+  /* For names/titles */
+  /* font-family: 'Great Vibes', cursive; */
   color: #2e5d4f;
   text-align: center;
 }
@@ -78,11 +80,13 @@ h4 {
 .hide {
   display: none;
 }
+
 .hero.show-text p,
 .hero.show-text h2 {
   opacity: 1;
   visibility: visible;
 }
+
 /* Animation Keyframes */
 @keyframes fadeSlideUp {
   0% {
@@ -161,34 +165,45 @@ h4 {
   top: 0;
   font-family: 'Poppins', sans-serif;
   transition: background 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px;
+  padding: 0 30px;
+  
 }
 
 .brand {
   font-size: 1.4em;
   font-weight: bold;
-  color: #2e5d4f;
+  color: none;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Music Control */
+.music-control {
+  position: left;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
 .music-control button {
-  background: #2e5d4f;
+  background: none;
   color: white;
   border: none;
-  padding: 8px;
-  border-radius: 50%;
+  padding: 10px;
+  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
+
+
 
 .music-control button:hover {
   transform: scale(1.1);
@@ -282,18 +297,42 @@ h4 {
 }
 
 .event {
-  background-color: #e8f5f0;
+  background: repeating-linear-gradient(white,
+      white 28px,
+      #dfeeea 29px);
+  /* notebook lines */
   border-left: 4px solid #2e5d4f;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  text-align: left;
+  /* red notebook margin */
+  padding: 20px 30px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Handlee', cursive;
+  /* handwriting font */
+  line-height: 1.8;
+  position: relative;
 }
 
+/* Add slight curl effect */
+.event::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, transparent 70%, rgba(0, 0, 0, 0.05) 100%);
+  border-bottom-left-radius: 6px;
+}
+
+/* Headings in green */
 .event h4 {
   margin-top: 0;
   color: #2e5d4f;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6em;
 }
+
 
 /* Countdown styling */
 #countdown {
@@ -305,11 +344,22 @@ h4 {
 }
 
 #countdown div {
+  width: 65px;
   text-align: center;
   padding: 10px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.65);
+  /* white with opacity */
+  backdrop-filter: blur(10px);
+  /* blur background */
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+
+  /* Soft shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   color: #2e5d4f;
 }
 
@@ -326,6 +376,7 @@ h4 {
   gap: 20px;
   font-size: 1.5em;
   margin-top: 20px;
+  background-color: red;
 }
 
 #timer div {
@@ -349,6 +400,51 @@ h4 {
   animation: fadeIn 2s ease;
 }
 
+
+.savethedate {
+  position: relative;
+  height: 75vh;
+  background-image: url('wedding reception.png');
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  align-items: Top;
+  justify-content: center;
+  transition: height 1.5s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.savethedateContainer {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 40%;
+  min-height: 20px;
+  padding: 25px;
+  text-align: center;
+
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.65);
+  /* white with opacity */
+  backdrop-filter: blur(10px);
+  /* blur background */
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+
+  /* Soft shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3em;
+  color: #2c2c2c;
+  letter-spacing: 1px;
+}
+
+
+
 .photos {
   display: flex;
   flex-wrap: wrap;
@@ -370,20 +466,69 @@ h4 {
   transform: scale(1.05);
 }
 
+.money {
+  display: flex;
+  gap: 2em;
+  justify-content: center; /* center horizontally */
+  margin: auto;
+}
+
+.giftSection{
+  background-color: rgb(236, 238, 220);
+  padding: 40px;
+  
+}
+.giftSection img{
+  display: block;
+  margin:20px auto;
+  max-width: 300px;
+  border-radius: 10px;
+}
+figure {
+  text-align: center;   /* center image + caption */
+  margin: 0px;
+}
+figcaption {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+  font-style: BOLD;
+}
+.giftSection p{
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  
+}
+.rightrsvp{
+  text-align: left;
+  padding-right:10%;
+  margin-left: 5%;
+}
+.rightrsvp h1,
+.rightrsvp p {
+  margin: 0;
+}
 /* RSVP Form */
 .rsvp {
-  padding: 40px 20px;
+  margin-right: 5%;
+  display: flex;
+  padding: 40px;
   background-color: #f6f6f6;
   text-align: center;
   animation: fadeIn 2s ease;
 }
+.rsvp h1{
+  text-align: left;
+}
+
 
 .rsvp form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  max-width: 400px;
+  width: 400px;
   margin: auto;
 }
 
@@ -420,23 +565,7 @@ footer {
   font-size: 1.2em;
 }
 
-/* Music Control */
-.music-control {
-  position: left;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
-}
 
-.music-control button {
-  background: #2e5d4f;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-}
 
 /* Hamburger animation */
 .hamburger.toggle {
@@ -850,10 +979,61 @@ footer {
 }
 
 
+.bg-pan-br {
+	-webkit-animation: bg-pan-br 8s both;
+	        animation: bg-pan-br 8s both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2025-9-26 22:26:0
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bg-pan-br
+ * ----------------------------------------
+ */
+@-webkit-keyframes bg-pan-br {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes bg-pan-br {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 900px) {
 
+  .giftSection img {
+    max-width: 90%;  /* shrink more for mobile */
+    border-radius: 8px; /* slightly smaller rounding */
+    margin: 15px auto; /* adjust spacing */
+  }
+  .rsvp {
+  display: block;
+  padding: 40px;
+  background-color: #f6f6f6;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+  
+  .savethedateContainer {
+    width: 90%;        /* take up most of the screen */
+    padding: 15px;     /* smaller padding */
+    font-size: 1.1em;  /* slightly smaller text */
+  }
   .typing {
     font-size: 1.5rem;
     /* smaller size for tablets & mobile */

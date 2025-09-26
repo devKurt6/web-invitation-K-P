@@ -64,15 +64,16 @@ const countdownFunction = setInterval(function () {
 function toggleMusic() {
   const music = document.getElementById("bgMusic");
   const btn = document.querySelector(".music-control button");
-  
+
   if (music.paused) {
     music.play();
-    btn.innerText = "🔈";
+    btn.innerHTML = '<img src="K&P.png" alt="K&P" style="width: 50px; height: auto;">';
   } else {
     music.pause();
-    btn.innerText = "🔇";
+    btn.innerHTML = '<img src="K&P.png" alt="K&P" style="width: 50px; height: auto;">';
   }
 }
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -272,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const textElement = document.querySelector(".typing");
 const resetBtn = document.getElementById("open-btn");
 
-const phrases = ["Hello!","Welcome", "We're getting married", "Paola & Kurt"];
+const phrases = ["Hello!","Welcome", "We're getting married", "Kurt & Paola"];
 let currentPhraseIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;

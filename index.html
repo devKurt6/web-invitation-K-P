@@ -30,7 +30,9 @@
                         <audio id="bgMusic" loop>
                             <source src="assets/music/You're Still the one.mp3" type="audio/mpeg">
                         </audio>
-                        <button onclick="toggleMusic()">🔈</button> 💍
+                        
+                        
+                        <button onclick="toggleMusic()"></button>
                     </div>
                 </div>
 
@@ -47,7 +49,6 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
 
@@ -55,7 +56,7 @@
     <section class="hero-section shake-horizontal">
         <div class="hero-content shake-horizontal">
             <h1><span id="K&P" class="typing"></span></h1>
-            
+
         </div>
     </section>
 
@@ -97,7 +98,7 @@
                 <p>A romantic sunset by the beach, and a ring that said forever 💍</p>
             </div>
         </div>
-        <!--<div class="timeline">
+        <!-- <div class="timeline">
             <h3>Our Love Story</h3>
             <div class="event" data-aos="fade-right">
                 <h4>How We Met</h4>
@@ -113,19 +114,35 @@
             </div>
         </div> -->
     </section>
+    <section class="savethedate">
+        <section class="countdown" id="countdown" data-aos="zoom-in">
+            <h3>Countdown to our big day</h3>
+            <div id="timer">
+                <div><span id="days">0</span><small>Days</small></div>
+                <div><span id="hours">0</span><small>Hours</small></div>
+                <div><span id="minutes">0</span><small>Minutes</small></div>
+                <div><span id="seconds">0</span><small>Seconds</small></div>
+            </div>
+        </section>
 
-    <section class="countdown" id="countdown" data-aos="zoom-in">
-        <h3>Countdown to our big day</h3>
-        <div id="timer">
-            <div><span id="days">0</span><small>Days</small></div>
-            <div><span id="hours">0</span><small>Hours</small></div>
-            <div><span id="minutes">0</span><small>Minutes</small></div>
-            <div><span id="seconds">0</span><small>Seconds</small></div>
-        </div>
+        <section id="countdown-section" class="fade-in">
+            <h2>Join Us for the Upcoming wedding of </h2>
+            <h1>Kurt & Paola</h1>
+
+
+            <div class="savethedateContainer zoom-in">
+                <h1>Save the date</h1>
+                <h2>The Wedding</h2>
+                <p>When & Where</p>
+                <P>28 October 2025 at 9:00 AM</P>
+                <p>Manila Temple</p>
+            </div>
+        </section>
     </section>
-    <section id="countdown-section" class="fade-in">
-        <h2>Countdown to Our Wedding</h2>
-        <div id="countdown" class="countdown-timer"></div>
+
+
+
+
     </section>
 
     <section class="gallery fade-in" id="gallery">
@@ -137,27 +154,70 @@
         </div>
     </section>
 
+    <!--     
     <section>
         <img src="cartoon.jpg" alt="Wedding Photo" class="zoom-in" width="400" />
     </section>
-
+    -->
 
 
     <section class="rsvp fade-in" id="rsvp">
-        <h3>RSVP</h3>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <select>
-                <option>Will attend</option>
-                <option>Sorry, can't come</option>
-            </select>
-            <button type="submit">Submit</button>
-        </form>
+
+        <div class="rightrsvp">
+            <h1>Hello</h1>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div>
+            <h3>RSVP</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <select>
+                    <option>Will attend</option>
+                    <option>Sorry, can't come</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+    </section>
+
+    <section class="giftSection">
+        <h1>GIFT</h1>
+
+        <img src="manila temple.jpg" alt="gift">
+
+
+        <p>With all that we have, we’ve been truly blessed, your presence and prayers are all that we request. But if
+            you desire to give nonetheless, a monetary gift
+            is one we suggest.
+        </p>
+        <div class="money">
+            <figure>
+                <img src="k.decena gcash.png" alt="gift">
+                <figcaption>GCASH</figcaption>
+            </figure>
+            <figure>
+                <img src="k.decena gcash.png" alt="gift">
+                <figcaption>GCASH</figcaption>
+            </figure>
+            
+        </div>
+
+
     </section>
 
     <footer>
-        <p>With love, Kurt & [Partner's Name]</p>
+        <p>Wedding Invitation of Kurt and Paola</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

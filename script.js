@@ -134,16 +134,16 @@ window.addEventListener('scroll', () => {
 });
 
 // Scroll shrink effect
-window.addEventListener('scroll', () => {
-  const hero = document.querySelector('.savethedate');
-  const scrollY = window.scrollY;
+// window.addEventListener('scroll', () => {
+//   const hero = document.querySelector('.savethedate');
+//   const scrollY = window.scrollY;
 
-  if (scrollY > 300) {
-    hero.classList.add('savethedate');
-  } else {
-    hero.classList.remove('savethedate');
-  }
-});
+//   if (scrollY > 300) {
+//     hero.classList.add('savethedate');
+//   } else {
+//     hero.classList.remove('savethedate');
+//   }
+// });
 
 //--------------------------------------------------------------------FLOWER
 const container = document.getElementById('flower-container');

@@ -1055,7 +1055,7 @@ footer {
   }
   .savethedate {
     position: relative;
-    width: 100%;
+    width: 75vh;
     height: 100vh;
     background-image: url('wedding reception.png');
     /* Replace with your image URL */

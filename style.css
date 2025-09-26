@@ -1052,6 +1052,7 @@ footer {
   }
   #countdown div {
     width: 60px;
+    margin: 0;
   }
   .savethedate {
     position: relative;

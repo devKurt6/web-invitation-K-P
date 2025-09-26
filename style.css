@@ -338,8 +338,9 @@ h4 {
 #countdown {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
+  
   font-size: 2em;
 }
 
@@ -368,6 +369,7 @@ h4 {
   font-size: 0.5em;
   margin-top: 5px;
   color: #2e5d4f;
+  
 }
 
 #timer {
@@ -1052,7 +1054,7 @@ footer {
   }
   #countdown div {
     width: 60px;
-    margin: 0;
+    
   }
   .savethedate {
     position: relative;

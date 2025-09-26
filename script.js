@@ -133,6 +133,18 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Scroll shrink effect
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.savethedate');
+  const scrollY = window.scrollY;
+
+  if (scrollY > 300) {
+    hero.classList.add('savethedate');
+  } else {
+    hero.classList.remove('savethedate');
+  }
+});
+
 //--------------------------------------------------------------------FLOWER
 const container = document.getElementById('flower-container');
 const flowerImages = [
@@ -204,6 +216,13 @@ window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
     hero.style.backgroundPositionY = offset * 0.2 + "px";
 });
+
+/************fix scroll in safari*********** */
+// window.addEventListener("scroll", function () {
+//     const hero = document.querySelector(".savethedate");
+//     let offset = window.pageYOffset;
+//     hero.style.backgroundPositionY = offset * 0.2 + "px";
+// });
 /************************** */
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".zoom-in");

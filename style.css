@@ -416,6 +416,7 @@ h4 {
   overflow: hidden;
 }
 
+
 .savethedateContainer {
   margin: auto;
   margin-bottom: 20px;
@@ -1028,6 +1029,11 @@ footer {
   text-align: center;
   animation: fadeIn 2s ease;
 }
+.rsvp form {
+  
+  width: 80%;
+  
+}
   
   .savethedateContainer {
     width: 90%;        /* take up most of the screen */
@@ -1037,6 +1043,32 @@ footer {
   .typing {
     font-size: 1.5rem;
     /* smaller size for tablets & mobile */
+  }
+  .savethedateContainer {
+    width: 45%;
+  }
+  .savethedate h2{
+    font-size: 1em;
+  }
+  #countdown div {
+    width: 45px;
+  }
+  .savethedate {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('wedding reception.png');
+    /* Replace with your image URL */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+    align-items: top;
+    justify-content: center;
+    transition: height 0.5s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
   }
 
   /* Hero Section */

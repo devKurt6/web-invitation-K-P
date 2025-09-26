@@ -217,6 +217,7 @@ window.addEventListener("scroll", function () {
     hero.style.backgroundPositionY = offset * 0.2 + "px";
 });
 
+
 /************fix scroll in safari*********** */
 // window.addEventListener("scroll", function () {
 //     const hero = document.querySelector(".savethedate");

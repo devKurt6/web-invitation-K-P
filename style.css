@@ -34,7 +34,7 @@ h4 {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   z-index: 2000;
@@ -50,8 +50,11 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('cartoon.jpg') center/100% 100% no-repeat;
-  filter: blur(8px);
+  background: url('Photo-318.jpg') center/100% 100% no-repeat;
+  background-size: cover;           /* fill entire container without distortion */
+  background-position: bottom;      /* keep image centered */
+  background-repeat: no-repeat;     /* no tiling */
+  /* filter: blur(8px); */
   /* blur the image */
   transform: scale(1.05);
   /* avoid visible edges after blur */
@@ -261,7 +264,18 @@ h4 {
 
 /* Hero Section */
 .hero {
-  background-color: #dfeeea;
+  
+  width: 100vw;
+  height: 120vh;
+  background-image: url('Photo-575.jpg');
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+ 
+  align-items: Top;
+  justify-content: center;
+  
   padding: 60px 20px;
   text-align: center;
   animation: fadeIn 2s ease;
@@ -270,6 +284,7 @@ h4 {
 .hero h1 {
   font-size: 3em;
   margin-bottom: 10px;
+  margin-top: 200px;
 }
 
 .hero p {
@@ -597,12 +612,13 @@ footer {
 /* Hero Section */
 .hero-section {
   position: relative;
-  height: 50vh;
-  background-image: url('try.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-image: url('Photo-575.jpg');
   /* Replace with your image URL */
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: cover;
   display: flex;
   align-items: Top;
   justify-content: center;
@@ -1080,7 +1096,7 @@ footer {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('p&K.jpg');
+    background-image: url('Photo-144.jpg');
     /* Replace with your image URL */
     background-size: cover;
     background-position: center center;

@@ -448,3 +448,131 @@ addGuestBtn.addEventListener('click', () => {
   
   guestList.appendChild(newInput);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const photos = document.querySelectorAll(".photos img");
+    const seeMoreBtn = document.getElementById("seeMoreBtn");
+
+    const initialCount = 6; // show 6 photos first
+    let showingAll = false;
+
+    // Hide all except the first 6
+    photos.forEach((img, index) => {
+      if (index < initialCount) img.classList.add("visible");
+    });
+
+    seeMoreBtn.addEventListener("click", () => {
+      if (!showingAll) {
+        photos.forEach(img => img.classList.add("visible"));
+        seeMoreBtn.textContent = "See Less";
+        showingAll = true;
+      } else {
+        photos.forEach((img, index) => {
+          if (index >= initialCount) img.classList.remove("visible");
+        });
+        seeMoreBtn.textContent = "See More";
+        showingAll = false;
+      }
+    });
+  });
+
+  // Safe, self-contained popup for images inside .money
+(function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    // If popup already exists (maybe from previous run), reuse it
+    let popup = document.getElementById('moneyImagePopup');
+    let popupImg;
+
+    if (!popup) {
+      // Create popup container
+      popup = document.createElement('div');
+      popup.id = 'moneyImagePopup';
+      popup.style.position = 'fixed';
+      popup.style.top = '0';
+      popup.style.left = '0';
+      popup.style.width = '100%';
+      popup.style.height = '100%';
+      popup.style.backgroundColor = 'rgba(0,0,0,0.85)';
+      popup.style.display = 'none';
+      popup.style.justifyContent = 'center';
+      popup.style.alignItems = 'center';
+      popup.style.zIndex = '99999';
+      popup.style.cursor = 'zoom-out';
+      popup.style.padding = '20px';
+      popup.style.boxSizing = 'border-box';
+
+      // Create popup image element
+      popupImg = document.createElement('img');
+      popupImg.id = 'moneyPopupImg';
+      popupImg.style.maxWidth = '92%';
+      popupImg.style.maxHeight = '92%';
+      popupImg.style.borderRadius = '12px';
+      popupImg.style.boxShadow = '0 8px 30px rgba(0,0,0,0.6)';
+      popupImg.style.objectFit = 'contain';
+      popupImg.style.background = '#fff';
+      popupImg.style.padding = '6px';
+      popupImg.style.boxSizing = 'border-box';
+
+      // Optional close button (small)
+      const closeBtn = document.createElement('button');
+      closeBtn.type = 'button';
+      closeBtn.innerHTML = '✕';
+      closeBtn.setAttribute('aria-label', 'Close image');
+      closeBtn.style.position = 'absolute';
+      closeBtn.style.top = '18px';
+      closeBtn.style.right = '24px';
+      closeBtn.style.background = 'transparent';
+      closeBtn.style.color = '#fff';
+      closeBtn.style.border = 'none';
+      closeBtn.style.fontSize = '28px';
+      closeBtn.style.cursor = 'pointer';
+      closeBtn.style.zIndex = '100000';
+      closeBtn.style.padding = '4px 8px';
+      closeBtn.style.lineHeight = '1';
+
+      // Append image and close to popup
+      popup.appendChild(popupImg);
+      popup.appendChild(closeBtn);
+      document.body.appendChild(popup);
+
+      // Close on clicking close button
+      closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+        popupImg.src = '';
+      });
+
+      // Close on clicking outside the image
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+          popupImg.src = '';
+        }
+      });
+    } else {
+      // if popup exists, get its image element
+      popupImg = document.getElementById('moneyPopupImg');
+    }
+
+    // Attach click listeners (event delegation is safe too)
+    const moneyImgs = document.querySelectorAll('.money img');
+
+    if (!moneyImgs || moneyImgs.length === 0) {
+      // nothing to do
+      return;
+    }
+
+    moneyImgs.forEach(img => {
+      // make sure the cursor indicates clickable
+      img.style.cursor = 'zoom-in';
+
+      img.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        // Use the clicked image src (or data-src if you use lazy loading)
+        const src = img.dataset.src || img.src || img.getAttribute('src');
+        if (!src) return;
+        popupImg.src = src;
+        popup.style.display = 'flex';
+      });
+    });
+  });
+})();

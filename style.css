@@ -25,6 +25,29 @@ h4 {
   text-align: center;
 }
 
+.photos img {
+  display: none;
+}
+
+.photos img.visible {
+  display: inline-block;
+}
+
+#seeMoreBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#seeMoreBtn:hover {
+  background-color: #666;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -34,10 +57,12 @@ form {
   background: #fff;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-form input, form select, form button {
+form input,
+form select,
+form button {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -74,14 +99,20 @@ form button:hover {
   transition: opacity 0.5s ease, visibility 0.5s ease;
   overflow: hidden;
 }
+
 .lovestorypic {
   width: 100%;
-  max-width: 800px; /* controls image size, adjust as needed */
+  max-width: 800px;
+  /* controls image size, adjust as needed */
   height: auto;
-  border-radius: 20px; /* rounded corners */
-  object-fit: cover; /* keeps aspect ratio clean */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover animation */
+  border-radius: 20px;
+  /* rounded corners */
+  object-fit: cover;
+  /* keeps aspect ratio clean */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* smooth hover animation */
   margin: 20px auto;
   display: block;
 }
@@ -98,9 +129,12 @@ form button:hover {
   width: 100%;
   height: 100%;
   background: url('Photo-318.jpg') center/100% 100% no-repeat;
-  background-size: cover;           /* fill entire container without distortion */
-  background-position: bottom;      /* keep image centered */
-  background-repeat: no-repeat;     /* no tiling */
+  background-size: cover;
+  /* fill entire container without distortion */
+  background-position: bottom;
+  /* keep image centered */
+  background-repeat: no-repeat;
+  /* no tiling */
   /* filter: blur(8px); */
   /* blur the image */
   transform: scale(1.05);
@@ -215,7 +249,7 @@ form button:hover {
   top: 0;
   font-family: 'Poppins', sans-serif;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  
+
 }
 
 .nav-container {
@@ -223,7 +257,7 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  
+
 }
 
 .brand {
@@ -311,7 +345,7 @@ form button:hover {
 
 /* Hero Section */
 .hero {
-  
+
   width: 100vw;
   height: 90vh;
   background-image: url('Photo-575.jpg');
@@ -319,10 +353,10 @@ form button:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
- 
+
   align-items: Top;
   justify-content: center;
-  
+
   padding: 60px 20px;
   text-align: center;
   animation: fadeIn 2s ease;
@@ -347,7 +381,7 @@ form button:hover {
 
 
 .whitesuit {
-  
+
   width: 100vw;
   height: 120vh;
   background-image: url('Photo-520.jpg');
@@ -355,9 +389,9 @@ form button:hover {
   background-size: cover;
   background-position: center;
   background-attachment: cover;
- 
 
-  
+
+
   padding: 60px 20px;
   text-align: center;
   animation: fadeIn 2s ease;
@@ -422,7 +456,7 @@ form button:hover {
   justify-content: center;
   gap: 10px;
   margin-top: 200px;
-  
+
   font-size: 2em;
 }
 
@@ -451,7 +485,7 @@ form button:hover {
   font-size: 0.5em;
   margin-top: 5px;
   color: #2e5d4f;
-  
+
 }
 
 #timer {
@@ -484,14 +518,19 @@ form button:hover {
   animation: fadeIn 2s ease;
 }
 
-.attire-bg{
+.attire-bg {
   background-color: rgb(255, 255, 255);
+  padding: 0;
 }
+
 .attire {
   display: block;
-  margin: 40px auto; /* centers the image horizontally */
-  max-width: 80%; /* makes it responsive */
+  margin: 0px auto;
+  /* centers the image horizontally */
+  width: 100%;
+  /* makes it responsive */
   height: auto;
+  border-radius: 20px;
 }
 
 
@@ -561,49 +600,104 @@ form button:hover {
   transform: scale(1.05);
 }
 
+.note {
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+
 .money {
   display: flex;
-  gap: 2em;
-  justify-content: center; /* center horizontally */
+  position: relative;
+  /* allow z-index to take effect */
+  z-index: 10;
+  /* higher than flower layers */
+
+  /* optional: adds contrast */
+  max-width: 60%;
+  width: 40%;
+
+  padding: 2px;
+  border-radius: 10px;
+  justify-content: center;
+  /* center horizontally */
+  margin: auto;
+  text-align: center;
+}
+
+.money p {
   margin: auto;
 }
 
-.giftSection{
+.money img {
+
+  border-radius: 10px;
+}
+
+
+
+.money figure {
+  display: inline-block;
+  padding: 50px;
+
+}
+
+
+.giftSection {
   background-color: rgb(236, 238, 220);
   padding: 40px;
-  
+  padding-top: 0;
+
 }
-.giftSection img{
+
+.giftSection p {
+  max-width: 70%;
+}
+
+.giftSection img {
   display: block;
-  margin:20px auto;
+  margin: 20px auto;
   max-width: 300px;
   border-radius: 10px;
 }
+
 figure {
-  text-align: center;   /* center image + caption */
+  text-align: center;
+  /* center image + caption */
   margin: 0px;
 }
+
 figcaption {
   font-size: 14px;
   color: #555;
   margin-top: 5px;
   font-style: BOLD;
 }
-.giftSection p{
+
+.giftSection p {
   margin: 0 auto;
   width: 500px;
   text-align: center;
-  
+
 }
-.rightrsvp{
+
+.rightrsvp {
   text-align: left;
-  padding-right:10%;
+  padding-right: 10%;
   margin-left: 5%;
+}
+.rightrsvp img{
+  width: 800px;
 }
 .rightrsvp h1,
 .rightrsvp p {
   margin: 0;
 }
+
 /* RSVP Form */
 .rsvp {
   margin-right: 5%;
@@ -613,7 +707,8 @@ figcaption {
   text-align: center;
   animation: fadeIn 2s ease;
 }
-.rsvp h1{
+
+.rsvp h1 {
   text-align: left;
 }
 
@@ -1076,9 +1171,10 @@ footer {
 
 
 .bg-pan-br {
-	-webkit-animation: bg-pan-br 8s both;
-	        animation: bg-pan-br 8s both;
+  -webkit-animation: bg-pan-br 8s both;
+  animation: bg-pan-br 8s both;
 }
+
 /* ----------------------------------------------
  * Generated by Animista on 2025-9-26 22:26:0
  * Licensed under FreeBSD License.
@@ -1095,14 +1191,17 @@ footer {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 100% 100%;
   }
 }
+
 @keyframes bg-pan-br {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 100% 100%;
   }
@@ -1113,76 +1212,94 @@ footer {
 @media (max-width: 900px) {
 
   /* Hero Section */
-.whitesuit {
-  
-  width: 100vw;
-  height: 120vh;
-  background-image: url('Photo-505.jpg');
-  /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  background-attachment: cover;
- 
+  .whitesuit {
 
-  
-  padding: 60px 20px;
-  text-align: center;
-  animation: fadeIn 2s ease;
-}
+    width: 100vw;
+    height: 120vh;
+    background-image: url('Photo-505.jpg');
+    /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: cover;
+
+
+
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease;
+  }
+
   .overlay-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('Photo-324.jpg') center/100% 100% no-repeat;
-  background-size: cover;           /* fill entire container without distortion */
-  background-position: bottom;      /* keep image centered */
-  background-repeat: no-repeat;     /* no tiling */
-  /* filter: blur(8px); */
-  /* blur the image */
-  transform: scale(1.05);
-  /* avoid visible edges after blur */
-  z-index: -1;
-  /* behind content */
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Photo-324.jpg') center/100% 100% no-repeat;
+    background-size: cover;
+    /* fill entire container without distortion */
+    background-position: bottom;
+    /* keep image centered */
+    background-repeat: no-repeat;
+    /* no tiling */
+    /* filter: blur(8px); */
+    /* blur the image */
+    transform: scale(1.05);
+    /* avoid visible edges after blur */
+    z-index: -1;
+    /* behind content */
+  }
+
   .giftSection img {
-    max-width: 90%;  /* shrink more for mobile */
-    border-radius: 8px; /* slightly smaller rounding */
-    margin: 15px auto; /* adjust spacing */
+    max-width: 90%;
+    /* shrink more for mobile */
+    border-radius: 8px;
+    /* slightly smaller rounding */
+    margin: 15px auto;
+    /* adjust spacing */
   }
+
   .rsvp {
-  display: block;
-  padding: 40px;
-  background-color: #f6f6f6;
-  text-align: center;
-  animation: fadeIn 2s ease;
-}
-.rsvp form {
-  
-  width: 80%;
-  
-}
-  
-  .savethedateContainer {
-    width: 90%;        /* take up most of the screen */
-    padding: 15px;     /* smaller padding */
-    font-size: 1.1em;  /* slightly smaller text */
+    display: block;
+    padding: 40px;
+    background-color: #f6f6f6;
+    text-align: center;
+    animation: fadeIn 2s ease;
   }
+
+  .rsvp form {
+
+    width: 80%;
+
+  }
+
+  .savethedateContainer {
+    width: 90%;
+    /* take up most of the screen */
+    padding: 15px;
+    /* smaller padding */
+    font-size: 1.1em;
+    /* slightly smaller text */
+  }
+
   .typing {
     font-size: 1.5rem;
     /* smaller size for tablets & mobile */
   }
+
   .savethedateContainer {
     width: 45%;
   }
-  .savethedate h2{
+
+  .savethedate h2 {
     font-size: 1em;
   }
+
   #countdown div {
     width: 60px;
-    
+
   }
+
   .savethedate {
     position: relative;
     width: 100%;
@@ -1193,7 +1310,7 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    
+
     align-items: top;
     justify-content: center;
     transition: height 0.5s ease-in-out;
@@ -1280,5 +1397,15 @@ footer {
 
   .hamburger {
     display: block;
+  }
+
+  .money figure {
+    display: inline-block;
+    padding: 0;
+
+  }
+
+  .attire {
+    width: 100% !important;
   }
 }

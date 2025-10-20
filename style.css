@@ -1439,5 +1439,58 @@ footer {
 .hero h2 {
   font-size: 2em;
   color: #4a7561;
+  margin-top: 0;
+}
+.typing {
+  margin-top: 150px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 4rem;
+  /* default for desktop */
+  color: #2e5d4f;
+  border-right: 3px solid orange;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+.typing {
+    font-size: 1.5rem;
+    /* smaller size for tablets & mobile */
+  }
+  .tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
+}
+
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 }

@@ -25,6 +25,37 @@ h4 {
   text-align: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+form input, form select, form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #f3b7b7;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #f09c9c;
+}
 
 /* Fullscreen overlay */
 #invitation-overlay {
@@ -42,6 +73,22 @@ h4 {
   font-family: 'Great Vibes', cursive;
   transition: opacity 0.5s ease, visibility 0.5s ease;
   overflow: hidden;
+}
+.lovestorypic {
+  width: 100%;
+  max-width: 800px; /* controls image size, adjust as needed */
+  height: auto;
+  border-radius: 20px; /* rounded corners */
+  object-fit: cover; /* keeps aspect ratio clean */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover animation */
+  margin: 20px auto;
+  display: block;
+}
+
+.lovestorypic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
 }
 
 .overlay-bg {
@@ -266,7 +313,7 @@ h4 {
 .hero {
   
   width: 100vw;
-  height: 120vh;
+  height: 90vh;
   background-image: url('Photo-575.jpg');
   /* Replace with your image URL */
   background-size: cover;
@@ -284,7 +331,7 @@ h4 {
 .hero h1 {
   font-size: 3em;
   margin-bottom: 10px;
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 .hero p {
@@ -296,6 +343,26 @@ h4 {
   font-size: 2em;
   color: #4a7561;
 }
+
+
+
+.whitesuit {
+  
+  width: 100vw;
+  height: 120vh;
+  background-image: url('Photo-520.jpg');
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: cover;
+ 
+
+  
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
 
 /* Story Section */
 .story {
@@ -319,7 +386,7 @@ h4 {
   border-left: 4px solid #2e5d4f;
   /* red notebook margin */
   padding: 20px 30px;
-  margin-bottom: 25px;
+  margin-bottom: 300px;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Handlee', cursive;
@@ -354,7 +421,7 @@ h4 {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 200px;
   
   font-size: 2em;
 }
@@ -417,11 +484,21 @@ h4 {
   animation: fadeIn 2s ease;
 }
 
+.attire-bg{
+  background-color: rgb(255, 255, 255);
+}
+.attire {
+  display: block;
+  margin: 40px auto; /* centers the image horizontally */
+  max-width: 80%; /* makes it responsive */
+  height: auto;
+}
+
 
 .savethedate {
   position: relative;
-  height: 75vh;
-  background-image: url('wedding reception.png');
+  height: 100vh;
+  background-image: url('Photo-38.jpg');
   /* Replace with your image URL */
   background-size: cover;
   background-position: center;
@@ -614,7 +691,7 @@ footer {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('Photo-575.jpg');
+  background-image: url('Photo-204.jpg');
   /* Replace with your image URL */
   background-size: contain;
   background-position: center;
@@ -1032,9 +1109,43 @@ footer {
 }
 
 
-/* Responsive Design */
+/* Responsive Design *****************************************************************************************************************************************/
 @media (max-width: 900px) {
 
+  /* Hero Section */
+.whitesuit {
+  
+  width: 100vw;
+  height: 120vh;
+  background-image: url('Photo-505.jpg');
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: cover;
+ 
+
+  
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+  .overlay-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Photo-324.jpg') center/100% 100% no-repeat;
+  background-size: cover;           /* fill entire container without distortion */
+  background-position: bottom;      /* keep image centered */
+  background-repeat: no-repeat;     /* no tiling */
+  /* filter: blur(8px); */
+  /* blur the image */
+  transform: scale(1.05);
+  /* avoid visible edges after blur */
+  z-index: -1;
+  /* behind content */
+}
   .giftSection img {
     max-width: 90%;  /* shrink more for mobile */
     border-radius: 8px; /* slightly smaller rounding */
@@ -1076,7 +1187,7 @@ footer {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('wedding reception.png');
+    background-image: url('Photo-38.jpg');
     /* Replace with your image URL */
     background-size: cover;
     background-position: center center;

@@ -17,8 +17,8 @@
         <div class="overlay-content">
             <h1>Kurt & Paola</h1>
             <p>We’re getting married!</p>
-            <button id="open-btn">💌 Open Invitation</button>
-            <p id="loading-msg">⏳ Please wait, loading...</p>
+            <button id="open-btn">Open Invitation</button>
+            <p id="loading-msg">Please wait, loading...</p>
         </div>
     </div>
     <div id="flower-container"></div>
@@ -40,7 +40,7 @@
                 <ul id="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#story">Our Story</a></li>
-                    <li><a href="#countdown">Countdown</a></li>
+                    <li><a href="#countdown2">Countdown</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#rsvp">RSVP</a></li>
                     <li>
@@ -73,14 +73,14 @@
 
 
     <section class="hero" id="hero" data-aos="fade-in">
-        <h1 class="tilt-in-fwd-tr bounce-top">Kurt & Paola</h1>
+        <h1>Kurt & Paola</h1>
         <div id="hide">
             <p class="fade-in">We're getting married!</p>
             <h2 class="fade-in">Oct 28, 2025</h2>
         </div>
     </section>
 
-    <section class="savethedate">
+    <section class="savethedate" id="countdown2">
         <section class="countdown" id="countdown" data-aos="zoom-in">
             <h3>Countdown to our big day</h3>
             <div id="timer">
@@ -108,16 +108,22 @@
     <section class="story" id="story">
 
         <div class="timeline">
-            <h3>Our Love Story</h3>
-            <div class="event puff-out-center zoom-in" >
+            <h1>Our Love Story</h1>
+            <img class="lovestorypic" src="Photo-10.jpg" alt="photoLoveStory1">
+            <div class="event puff-out-center zoom-in">
                 <h4>How We Met</h4>
-                <p>It all started in college where fate brought us together...It all started in college where fate brought us together...It all started in college where fate brought us together...It all started in college where fate brought us together...It all started in college where fate brought us together...</p>
+                <p>It all started in college where fate brought us together...It all started in college where fate
+                    brought us together...It all started in college where fate brought us together...It all started in
+                    college where fate brought us together...It all started in college where fate brought us together...
+                </p>
             </div>
-            <div class="event zoom-in" >
+            <img class="lovestorypic" src="Photo-24.jpg" alt="photoLoveStory1">
+            <div class="event zoom-in">
                 <h4>First Date</h4>
                 <p>We went out for coffee and talked for hours...</p>
             </div>
-            <div class="event zoom-in" >
+            <img class="lovestorypic" src="Photo-46.jpg" alt="photoLoveStory1">
+            <div class="event zoom-in">
                 <h4>The Proposal</h4>
                 <p>A romantic sunset by the beach, and a ring that said forever 💍</p>
             </div>
@@ -140,17 +146,29 @@
     </section>
 
 
-
+    <section class="whitesuit">
 
 
     </section>
 
+
+
+
     <section class="gallery fade-in" id="gallery">
         <h3>Photo Memories</h3>
         <div class="photos ">
-            <img class="zoom-in" src="p&K.jpg" alt="Photo 1">
-            <img class="zoom-in" src="p&K.jpg" alt="Photo 2">
-            <img class="zoom-in" src="p&K.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-50.jpg" alt="Photo 1">
+            <img class="zoom-in" src="Photo-52.jpg" alt="Photo 2">
+            <img class="zoom-in" src="Photo-56.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-58.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-60.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-63.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-66.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-68.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-70.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-88.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-103.jpg" alt="Photo 3">
+            <img class="zoom-in" src="Photo-75.jpg" alt="Photo 3">
         </div>
     </section>
 
@@ -159,6 +177,7 @@
         <img src="cartoon.jpg" alt="Wedding Photo" class="zoom-in" width="400" />
     </section>
     -->
+
 
 
     <section class="rsvp fade-in" id="rsvp">
@@ -175,29 +194,41 @@
         </div>
         <div>
             <h3>RSVP</h3>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <select>
+            <form name="rsvp" method="POST" data-netlify="true">
+                <input type="text" name="main_guest" placeholder="Your Full Name" required>
+
+                <div id="guest-list">
+                    <!-- Extra guest names will appear here -->
+                </div>
+
+                <button type="button" id="addGuestBtn">+ Add Family Member</button>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="attendance" required>
+                    <option value="">Select attendance</option>
                     <option>Will attend</option>
                     <option>Sorry, can't come</option>
                 </select>
+
                 <button type="submit">Submit</button>
             </form>
         </div>
 
 
+
+    </section>
+
+    <section class="attire-bg">
+        <img class="attire" src="Attire.png" alt="Attire">
     </section>
 
     <section class="giftSection">
         <h1>GIFT</h1>
-
         <img src="manila temple.jpg" alt="gift">
-
-
-        <p>With all that we have, we’ve been truly blessed, your presence and prayers are all that we request. But if
-            you desire to give nonetheless, a monetary gift
-            is one we suggest.
+        <p>As love is what this celebration is all about, your presence at our wedding and your prayers would bring us
+            genuine happiness.
+            If you were thinking of a present for us to start our married life, monetary gifts would be very much
+            appreciated.
         </p>
         <div class="money">
             <figure>
@@ -208,10 +239,7 @@
                 <img src="k.decena gcash.png" alt="gift">
                 <figcaption>GCASH</figcaption>
             </figure>
-
         </div>
-
-
     </section>
 
     <footer>

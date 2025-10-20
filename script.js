@@ -358,3 +358,93 @@ const el2 = document.getElementById("hide");
   }
 
 }
+
+// Create popup elements dynamically
+const popup = document.createElement('div');
+const popupImg = document.createElement('img');
+const closeBtn = document.createElement('span');
+
+// Set IDs and styles
+popup.id = 'imagePopup';
+popup.style.cssText = `
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+`;
+
+popupImg.style.cssText = `
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+`;
+
+closeBtn.textContent = '×';
+closeBtn.style.cssText = `
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+`;
+
+// Add elements to DOM
+popup.appendChild(popupImg);
+popup.appendChild(closeBtn);
+document.body.appendChild(popup);
+
+// Add functionality
+const galleryImages = document.querySelectorAll('.photos img');
+
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    popupImg.src = img.src;
+    popup.style.display = 'flex';
+    popupImg.style.transform = 'scale(1.05)';
+    setTimeout(() => (popupImg.style.transform = 'scale(1)'), 150);
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+popup.addEventListener('click', (e) => {
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+// Dynamic guest name input
+const addGuestBtn = document.getElementById('addGuestBtn');
+const guestList = document.getElementById('guest-list');
+let guestCount = 0;
+
+addGuestBtn.addEventListener('click', () => {
+  guestCount++;
+  
+  const newInput = document.createElement('input');
+  newInput.type = 'text';
+  newInput.name = `guest_${guestCount}`;
+  newInput.placeholder = `Guest ${guestCount} Name`;
+  newInput.required = true;
+  newInput.style.marginTop = '10px';
+  newInput.style.display = 'block';
+  newInput.style.width = '100%';
+  newInput.style.padding = '10px';
+  newInput.style.borderRadius = '8px';
+  newInput.style.border = '1px solid #ccc';
+  newInput.style.fontFamily = 'Poppins, sans-serif';
+  
+  guestList.appendChild(newInput);
+});

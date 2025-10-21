@@ -76,8 +76,8 @@
         <h2>Kurt & Paola</h2>
         <div id="hide">
             <p class="fade-in">We're getting married!</p>
-            <P class="fade-in" >Oct 28, 2025</P>
-            
+            <P class="fade-in">Oct 28, 2025</P>
+
         </div>
     </section>
 
@@ -195,22 +195,26 @@
         </div>
         <div>
             <h3>RSVP</h3>
-            <form name="rsvp" method="POST" netlify>
-                <input type="text" name="main_guest" placeholder="Your Full Name" required>
+            <form name="rsvp" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="rsvp">
 
-                <div id="guest-list">
-                    <!-- Extra guest names will appear here -->
-                </div>
+                <label>Main Guest Name</label>
+                <input type="text" name="guest-name" required>
 
-                <button type="button" id="addGuestBtn">+ Add Family Member</button>
+                <label>Email</label>
+                <input type="email" name="guest-email" required>
 
-                <input type="email" name="email" placeholder="Your Email" required>
+                <label>Attendance</label>
                 <select name="attendance" required>
-                    <option value="">Select attendance</option>
-                    <option>Will attend</option>
-                    <option>Sorry, can't come</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                 </select>
 
+                <div id="family-members">
+                    <h3>Family Members</h3>
+                </div>
+
+                <button type="button" id="add-member">+ Add Family Member</button>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -252,8 +256,46 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+        document.addEventListener("DOMContentLoaded", function () {
+  const addBtn = document.getElementById("add-member");
+  const familyDiv = document.getElementById("family-members");
+  const form = document.querySelector('form[name="rsvp"]');
+
+  let memberCount = 0;
+
+  addBtn.addEventListener("click", () => {
+    memberCount++;
+
+    const memberDiv = document.createElement("div");
+    memberDiv.classList.add("member-entry");
+    memberDiv.innerHTML = `
+      <input type="text" placeholder="Family Member Name" class="member-input" required>
+      <button type="button" class="remove-member">Remove</button>
+    `;
+    familyDiv.appendChild(memberDiv);
+
+    memberDiv.querySelector(".remove-member").addEventListener("click", () => {
+      memberDiv.remove();
+    });
+  });
+
+  // 💡 Add hidden fields before submit so Netlify can read them
+  form.addEventListener("submit", () => {
+    document.querySelectorAll('input[name^="member"]').forEach(e => e.remove());
+    const memberInputs = document.querySelectorAll(".member-input");
+
+    memberInputs.forEach((input, index) => {
+      const hidden = document.createElement("input");
+      hidden.type = "hidden";
+      hidden.name = `member-${index + 1}`;
+      hidden.value = input.value;
+      form.appendChild(hidden);
+    });
+  });
+});
     </script>
     <script src="script.js"></script>
+
 
 </body>
 

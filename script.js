@@ -426,6 +426,7 @@ popup.addEventListener('click', (e) => {
   }
 });
 // Dynamic guest name input
+// --- Add and remove guest names dynamically ---
 const addGuestBtn = document.getElementById('addGuestBtn');
 const guestList = document.getElementById('guest-list');
 let guestCount = 0;
@@ -433,54 +434,50 @@ let guestCount = 0;
 addGuestBtn.addEventListener('click', () => {
   guestCount++;
 
-  // Container for each guest input + remove button
-  const guestDiv = document.createElement('div');
-  guestDiv.style.display = 'flex';
-  guestDiv.style.alignItems = 'center';
-  guestDiv.style.marginTop = '10px';
-  guestDiv.style.gap = '10px';
+  const wrapper = document.createElement('div');
+  wrapper.style.display = 'flex';
+  wrapper.style.alignItems = 'center';
+  wrapper.style.gap = '10px';
+  wrapper.style.marginTop = '10px';
 
-  const newInput = document.createElement('input');
-  newInput.type = 'text';
-  newInput.name = `guest_name[]`; // array name for Netlify to capture all guests
-  newInput.placeholder = `Guest ${guestCount} Name`;
-  newInput.required = true;
-  newInput.style.flex = '1';
-  newInput.style.padding = '10px';
-  newInput.style.borderRadius = '8px';
-  newInput.style.border = '1px solid #ccc';
-  newInput.style.fontFamily = 'Poppins, sans-serif';
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.name = 'guest_name[]'; // Netlify collects these as a list
+  input.placeholder = `Family Member ${guestCount}`;
+  input.required = true;
+  input.style.flex = '1';
+  input.style.padding = '10px';
+  input.style.borderRadius = '8px';
+  input.style.border = '1px solid #ccc';
+  input.style.fontFamily = 'Poppins, sans-serif';
 
-  // Optional remove button
-  const removeBtn = document.createElement('button');
-  removeBtn.textContent = '×';
-  removeBtn.type = 'button';
-  removeBtn.style.background = '#ff5b5b';
-  removeBtn.style.color = 'white';
-  removeBtn.style.border = 'none';
-  removeBtn.style.borderRadius = '5px';
-  removeBtn.style.cursor = 'pointer';
-  removeBtn.style.fontSize = '16px';
-  removeBtn.style.padding = '5px 10px';
-  
-  removeBtn.addEventListener('click', () => {
-    guestList.removeChild(guestDiv);
-  });
+  const remove = document.createElement('button');
+  remove.type = 'button';
+  remove.textContent = '×';
+  remove.style.background = '#ff5b5b';
+  remove.style.color = '#fff';
+  remove.style.border = 'none';
+  remove.style.borderRadius = '5px';
+  remove.style.cursor = 'pointer';
+  remove.style.fontSize = '16px';
+  remove.style.padding = '5px 10px';
+  remove.addEventListener('click', () => guestList.removeChild(wrapper));
 
-  guestDiv.appendChild(newInput);
-  guestDiv.appendChild(removeBtn);
-  guestList.appendChild(guestDiv);
+  wrapper.appendChild(input);
+  wrapper.appendChild(remove);
+  guestList.appendChild(wrapper);
 });
 
-// ✅ Fix for Netlify to include dynamically added inputs
-document.querySelector("form[name='rsvp']").addEventListener("submit", function(e) {
+// --- Netlify fix so dynamic inputs are included ---
+document.querySelector("form[name='rsvp']").addEventListener('submit', e => {
   const form = e.target;
-  const hidden = document.createElement("input");
-  hidden.type = "hidden";
-  hidden.name = "form-name";
-  hidden.value = form.getAttribute("name");
+  const hidden = document.createElement('input');
+  hidden.type = 'hidden';
+  hidden.name = 'form-name';
+  hidden.value = form.getAttribute('name');
   form.appendChild(hidden);
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

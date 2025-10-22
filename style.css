@@ -1389,7 +1389,7 @@ footer {
 
     position: relative;
     width: 100%;
-    height: 85vh;
+    height: 58vh;
     background-image: url('Photo-2021.jpg');
     /* Replace with your image URL */
     background-size: cover;
@@ -1475,7 +1475,7 @@ footer {
   .hero {
 
     width: 100vw;
-    height: 65vh;
+    height: 55vh;
     background-image: url('Photo-575.jpg');
     /* Replace with your image URL */
     background-size: cover;

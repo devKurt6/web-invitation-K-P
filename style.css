@@ -686,7 +686,7 @@ form button:hover {
 .money img {
 
   border-radius: 10px;
-  width: 100%;
+  width: 60%;
 }
 
 
@@ -757,7 +757,7 @@ figcaption {
 
 /* RSVP Form */
 .rsvp {
-  margin-right: 0%;
+  margin-right: 4%;
   display: flex;
   padding: 40px;
   background-color: #f6f6f6;
@@ -767,6 +767,7 @@ figcaption {
 
 .rsvp h1 {
   text-align: center;
+  
 }
 
 
@@ -1464,7 +1465,7 @@ footer {
     text-align: center !important;
   }
   .money figcaption {
-  font-size: 25px; /* or any size you prefer */
+  font-size: 20px; /* or any size you prefer */
 }
 
  

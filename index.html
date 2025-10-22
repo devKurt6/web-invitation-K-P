@@ -14,12 +14,12 @@
 <body>
     <div id="invitation-overlay">
         <div class="overlay-bg"></div>
-        <div class="overlay-content">
-            <h1>Kurt & Paola</h1>
-            <p>We’re getting married!</p>
-            <button id="open-btn">Open Invitation</button>
-            <p id="loading-msg">Please wait, loading...</p>
-        </div>
+        <div class="overlay-content"></div>
+        <h4>The Wedding Celebration of</h4>
+        <h1>Kurt & Paola</h1>
+        <button id="open-btn">Open Invitation</button>
+        <p id="loading-msg">Please wait, loading...</p>
+    </div>
     </div>
     <div id="flower-container"></div>
     <header class="navbar">
@@ -38,11 +38,13 @@
 
                 <div class="hamburger" onclick="toggleMenu()">☰</div>
                 <ul id="nav-links">
-                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#story">Our Story</a></li>
                     <li><a href="#countdown2">Countdown</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#rsvp">RSVP</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#gift">Gift</a></li>
                     <li>
 
                     </li>
@@ -53,7 +55,7 @@
 
 
     <!-- Hero Section with Full Background Image -->
-    <section class="hero-section shake-horizontal">
+    <section id="home" class="hero-section shake-horizontal">
         <div class="hero-content shake-horizontal">
             <h1><span id="K&P" class="typing"></span></h1>
 
@@ -72,17 +74,16 @@
 
 
 
-    <section class="hero" id="hero" data-aos="fade-in">
-        <h2 style="
-  font-family: 'Amsterdam Two', cursive;
+    <section class="hero" data-aos="fade-in">
+        <h1 style="
+  font-family: 'Overthink', serif;
   color: #2e5d4f;
   text-align: center;
-  font-size: 3rem;
   letter-spacing: 1px;
   font-weight: normal;
 ">
             Kurt & Paola
-        </h2>
+        </h1>
 
         <div id="hide">
             <p class="fade-in">We're getting married!</p>
@@ -107,12 +108,14 @@
         <section id="countdown-section" class="fade-in ">
             <h1>We,</h1>
             <h1>Kurt & Paola</h1>
-            <h3>Kindly request the honor of your presence at the celebration of our marriage before God. </h3>
+            <h3 style="margin-left: 10px; margin-right: 10px;">Kindly request the honor of your presence at the
+                celebration of our marriage before God. </h3>
 
 
 
             <div class="savethedateContainer zoom-in">
                 <h2>Save The Date</h2>
+                <P>When & Where</P>
                 <P>28 October 2025 | 9 AM</P>
                 <p>Manila Temple, Quezon City, Metro Manila</p>
                 <br>
@@ -129,7 +132,7 @@
             <h1>Our Love Story</h1>
             <img class="lovestorypic" src="Photo-10.jpg" alt="photoLoveStory1">
             <div class="event puff-out-center zoom-in">
-                <h4>How We Met</h4>
+                <h2>How We Met</h2>
                 <p>It all began in 2021, during the pandemic, in our second year at Tanauan City College.
                     Classes were online, and we never thought real connections could grow through a screen—but
                     one ordinaryconversation changed everything.
@@ -144,7 +147,7 @@
             </div>
             <img class="lovestorypic" src="Photo-110.jpg" alt="photoLoveStory1">
             <div class="event zoom-in">
-                <h4>First Date</h4>
+                <h2>First Date</h2>
                 <p>Paola thought our first date was at McDonald’s, because we shared a table just the two of us, even
                     though classmates were around. It felt special to her, a little moment just for us. But the official
                     first date really happened at WalterMart and Tanauan Plaza, just before Kurt’s birthday—a day of
@@ -153,7 +156,7 @@
             </div>
             <img class="lovestorypic" src="Photo-560.jpg" alt="photoLoveStory1">
             <div class="event zoom-in">
-                <h4>The Proposal</h4>
+                <h2>The Proposal</h2>
                 <p>On May 31, 2025, at the Manila Temple, Kurt, with the help of Paola’s family, planned a beautiful
                     surprise that Paola never saw coming. She couldn’t believe what was happening as Kurt knelt down and
                     held out a ring that said forever. In that unforgettable moment, he asked — and her heart said
@@ -187,7 +190,7 @@
 
 
     <section class="gallery fade-in" id="gallery">
-        <h3>Photo Memories</h3>
+        <h1>Photo Memories</h1>
         <div class="photos">
             <img class="zoom-in" src="Photo-22.jpg" alt="Photo 1">
             <img class="zoom-in" src="Photo-25.jpg" alt="Photo 2">
@@ -222,18 +225,20 @@
     <section class="rsvp fade-in" id="rsvp">
 
         <div class="rightrsvp">
-            <h1>Join us</h1>
+            <h1>Join us!</h1>
             <p>We would be truly honored to have you join us on our special day as we celebrate not only our love but
                 also the beginning of a new chapter in our lives together. Your presence would bring so much joy and
                 warmth, and it would mean the world to us to share these precious moments with our family and friends.
                 Kindly let us know if you’ll be able to attend, as celebrating this milestone with the people we cherish
                 most will make our day even more unforgettable.
             </p>
-            <br>
-            <img style="margin: auto;" class="attire" src="Attire.png" alt="Attire">
+            <br> <br>
+            <img class="attire" src="Attire text.png" alt="Attire"> <br>
+            <img class="attire" src="Attire.png" alt="Attire">
         </div>
+        <br> <br>
         <div>
-            <h3>RSVP</h3>
+            <h1>RSVP</h1>
             <form name="rsvp" method="POST" netlify>
                 <input type="text" name="main_guest" placeholder="Your Family Name" required>
 
@@ -255,18 +260,20 @@
         </div>
     </section>
 
-    <section class="locationQRCode">
+    <section id="location" class="locationQRCode">
         <h1>LOCATION</h1>
         <div>
             <p class="note">To view directions, kindly scan the QR codes. We look forward to seeing you there!</p>
             <div class="money">
+                
+                    <figure>
+                        <img src="Ceremony.png" alt="location">
+                        <figcaption>WEDDING CEREMONY</figcaption>
+                    </figure>
+                
 
                 <figure>
-                    <img src="Ceremony.png" alt="gift">
-                    <figcaption>WEDDING CEREMONY</figcaption>
-                </figure>
-                <figure>
-                    <img src="Reception.png" alt="gift">
+                    <img src="Reception.png" alt="location">
                     <figcaption>RECEPTION</figcaption>
                 </figure>
             </div>
@@ -279,7 +286,7 @@
         <img class="attire" src="Attire.png" alt="Attire">
     </section> -->
 
-    <section class="giftSection">
+    <section id="gift" class="giftSection">
         <h1>GIFT</h1>
         <alt="gift">
             <p>As love is what this celebration is all about, your presence at our wedding and your prayers would bring
@@ -288,7 +295,7 @@
 
             <div>
 
-                <div class="money">
+                <div class="photos">
 
                     <figure>
                         <img src="k.decena gcash.png" alt="gift">
@@ -299,6 +306,7 @@
                         <figcaption>GCASH</figcaption>
                     </figure>
                 </div>
+                <br>
                 <p class="note">Note: tap to view QR Code</p>
             </div>
     </section>

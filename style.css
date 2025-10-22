@@ -1,6 +1,6 @@
 /* Base Reset */
 body {
-  
+
   font-family: 'Poppins', sans-serif;
   background-color: #f6f6f6;
   color: #333;
@@ -14,17 +14,18 @@ body {
 }
 
 
-h1{
-  font-family: 'Poppins',  sans-serif;
+h1 {
+  font-family: 'Poppins', sans-serif;
   /* For names/titles */
   /* font-family: 'Great Vibes', cursive; */
   color: #2e5d4f;
   text-align: center;
 }
+
 h2,
 h3,
 h4 {
-  font-family: 'Poppins',  sans-serif;
+  font-family: 'Poppins', sans-serif;
   /* For names/titles */
   /* font-family: 'Great Vibes', cursive; */
   color: #2e5d4f;
@@ -32,25 +33,28 @@ h4 {
 }
 
 .locationQRCode {
-  background-color: #ffffff;
-  padding: 40px;
-  padding-top: 20px;
+  background-color: #fffefe;
+  padding: 10px;
+  padding-top: 10px;
+
 
 }
 
 .locationQRCode p {
-  max-width: 40%;
-  margin: 0 auto;
+  max-width: 30%;
+  margin: 0px auto;
+  margin-bottom: 10;
   width: 500px;
   text-align: center;
 }
 
 .locationQRCode img {
   display: block;
-  margin: 20px auto;
+  margin: 0px auto;
   max-width: 300px;
   border-radius: 10px;
 }
+
 .photos img {
   display: none;
 }
@@ -64,7 +68,7 @@ h4 {
   margin: 20px auto;
   padding: 10px 20px;
   border: none;
-  background-color: #444;
+  background-color: #5b6d4c;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -154,7 +158,7 @@ form button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('Photo-321.jpg') center/100% 100% no-repeat;
+  background: url('Photo-141.jpg') center/100% 100% no-repeat;
   background-size: cover;
   /* fill entire container without distortion */
   background-position: bottom;
@@ -175,15 +179,19 @@ form button:hover {
 }
 
 #invitation-overlay h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-family: 'Malibu', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 3.5em;
+  margin-top: 10px;
+  margin-bottom: 30px;
   color: #254c3e;
 
 }
 
-#invitation-overlay p {
+#invitation-overlay h4 {
   font-size: 1.2em;
-  margin-bottom: 20px;
+  font-family: 'Overthink', serif;
+  margin-top: 40px;
+  margin-bottom: 5px;
   color: #254c3e;
 }
 
@@ -231,6 +239,10 @@ form button:hover {
   animation: fadeSlideUp 1s ease forwards;
 }
 
+#invitation-overlay .overlay-content h4 {
+  animation: fadeSlideUp 1s ease forwards;
+}
+
 #invitation-overlay .overlay-content p {
   animation: fadeSlideUp 1s ease forwards;
   animation-delay: 0.5s;
@@ -246,6 +258,8 @@ form button:hover {
 #open-btn {
   padding: 12px 30px;
   font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
   background: #2e5d4f;
   color: white;
   border: none;
@@ -268,7 +282,7 @@ form button:hover {
 .navbar {
   position: fixed;
   width: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  background: hsl(0, 0%, 100%);
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   z-index: 1000;
@@ -482,7 +496,7 @@ form button:hover {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 100px;
 
   font-size: 2em;
 }
@@ -547,17 +561,19 @@ form button:hover {
 
 .attire-bg {
   background-color: rgb(255, 255, 255);
-  padding: 0;
+  text-align: center;
+  padding: 40px;
+  padding-top: 20px;
 }
 
-.attire {
+.attire img {
   display: block;
   margin: 0px auto;
   /* centers the image horizontally */
-  width: 100%;;
+  width: 100%;
   /* makes it responsive */
   height: auto;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 
@@ -604,9 +620,10 @@ form button:hover {
   color: #2c2c2c;
   letter-spacing: 1px;
 }
-.countdownText h2{
-font-size: 2em;
-color: white;
+
+.countdownText h2 {
+  font-size: 2em;
+  color: white;
 }
 
 
@@ -663,25 +680,29 @@ color: white;
 
 .money p {
   margin: auto;
+  text-align: center;
 }
 
 .money img {
 
   border-radius: 10px;
-  width:200px;
+  width: 100%;
 }
 
 
 
 .money figure {
+
   display: inline-block;
-  padding: 50px;
+  text-align: center;
+  
 
 }
 
 
 .giftSection {
-  background-color: rgb(236, 238, 220);
+  background-color: #f6f6f6;
+  ;
   padding: 40px;
   padding-top: 20px;
 
@@ -694,14 +715,15 @@ color: white;
 .giftSection img {
   display: block;
   margin: 20px auto;
-  max-width: 300px;
-  border-radius: 10px;
+  max-width: 250px;
+  height: auto;
+  border-radius: 20px;
 }
 
 figure {
   text-align: center;
   /* center image + caption */
-  margin: 0px;
+  margin: 20px;
 }
 
 figcaption {
@@ -719,21 +741,23 @@ figcaption {
 }
 
 .rightrsvp {
-  text-align: left;
+  text-align: center;
   padding-right: 10%;
-  margin-left: 5%;
+  margin-left: 10%;
 }
-.rightrsvp img{
-  width: 800px;
+
+.rightrsvp img {
+  width: 500px;
 }
+
 .rightrsvp h1,
 .rightrsvp p {
-  margin: 0;
+  margin: auto;
 }
 
 /* RSVP Form */
 .rsvp {
-  margin-right: 5%;
+  margin-right: 0%;
   display: flex;
   padding: 40px;
   background-color: #f6f6f6;
@@ -742,7 +766,7 @@ figcaption {
 }
 
 .rsvp h1 {
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -766,7 +790,7 @@ figcaption {
 
 .rsvp button {
   padding: 10px 20px;
-  background-color: #2e5d4f;
+  background-color: #5b6d4c;
   color: white;
   border: none;
   border-radius: 6px;
@@ -775,7 +799,7 @@ figcaption {
 }
 
 .rsvp button:hover {
-  background-color: #254c3e;
+  background-color: #5b6d4c;
 }
 
 /* Footer */
@@ -784,7 +808,7 @@ footer {
   width: 100%;
   padding: 10px;
   text-align: center;
-  background-color: #8ea58c;
+  background-color: #5b6d4c;
   color: white;
   font-family: 'Great Vibes', cursive;
   font-size: 1.2em;
@@ -1285,17 +1309,17 @@ footer {
   }
 
   .giftSection img {
-    max-width: 90%;
+    max-width: 60%;
     /* shrink more for mobile */
     border-radius: 8px;
     /* slightly smaller rounding */
-    margin: 15px auto;
+    margin: 0px auto;
     /* adjust spacing */
   }
 
   .rsvp {
     display: block;
-    padding: 40px;
+    padding: 50px;
     background-color: #f6f6f6;
     text-align: center;
     animation: fadeIn 2s ease;
@@ -1303,12 +1327,12 @@ footer {
 
   .rsvp form {
 
-    width: 80%;
+    width: 93%;
 
   }
 
   .savethedateContainer {
-    width: 90%;
+    width: 70%;
     /* take up most of the screen */
     padding: 15px;
     /* smaller padding */
@@ -1316,14 +1340,16 @@ footer {
     /* slightly smaller text */
   }
 
+  .savethedateContainer p {
+    margin: 10px auto;
+  }
+
   .typing {
     font-size: 1.5rem;
     /* smaller size for tablets & mobile */
   }
 
-  .savethedateContainer {
-    width: 45%;
-  }
+
 
   .savethedate h2 {
     font-size: 1em;
@@ -1337,8 +1363,8 @@ footer {
   .savethedate {
     position: relative;
     width: 100%;
-    height: 150vh;
-    background-image: url('Photo-38.jpg');
+    height: 140vh;
+    background-image: url('Photo-381.jpg');
     /* Replace with your image URL */
     background-size: cover;
     background-position: center center;
@@ -1415,7 +1441,7 @@ footer {
   #nav-links {
     display: none;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
+    background: #f8f8f8;
     position: absolute;
     top: 60px;
     right: 0;
@@ -1435,141 +1461,156 @@ footer {
 
   .money figure {
     display: inline-block;
-    padding: 0;
-
+    text-align: center !important;
   }
+  .money figcaption {
+  font-size: 25px; /* or any size you prefer */
+}
+
+ 
+
+ 
 
   .attire {
-    width: 100% !important;
+    width: 115% !important;
+
   }
+
   .hero {
 
-  width: 100vw;
-  height: 65vh;
-  background-image: url('Photo-575.jpg');
-  /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    width: 100vw;
+    height: 65vh;
+    background-image: url('Photo-575.jpg');
+    /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
-  align-items: Top;
-  justify-content: center;
+    align-items: Top;
+    justify-content: center;
 
-  padding: 60px 20px;
-  text-align: center;
-  animation: fadeIn 2s ease;
-}
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  margin-top: 0;
-}
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease;
+  }
 
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 0;
-}
+  .hero h1 {
+    font-size: 2em;
 
-.hero h2 {
-  font-size: 2em;
-  color: #4a7561;
-  margin-top: 0;
-}
-.typing {
-  margin-top: 50px;
-  font-family: monospace;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 4rem;
-  /* default for desktop */
-  color: #f1f1f1;
-  border-right: 3px solid orange;
-  display: inline-block;
-  animation: blink 0.7s infinite;
-}
+    margin: 10px auto;
+    margin-right: 60px;
+  }
 
-.typing {
+  .hero p {
+    font-size: 1.2em;
+    margin-right: 60px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+    color: #4a7561;
+    margin-top: 0;
+  }
+
+  .typing {
+    margin-top: 50px;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 4rem;
+    /* default for desktop */
+    color: #f1f1f1;
+    border-right: 3px solid orange;
+    display: inline-block;
+    animation: blink 0.7s infinite;
+  }
+
+  .typing {
     font-size: 1.5rem;
     /* smaller size for tablets & mobile */
   }
+
   .tracking-in-expand {
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
-}
-
-
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
   }
 
-  40% {
-    opacity: 0.6;
+
+  @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
-  100% {
-    opacity: 1;
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
-}
 
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
+  .money img {
+
+    border-radius: 10px;
+    width: 100px;
   }
 
-  40% {
-    opacity: 0.6;
+  .locationQRCode {
+    background-color: lch(100% 0.01 296.81);
+    padding: 20px;
+    padding-top: 20px;
+
   }
 
-  100% {
-    opacity: 1;
+  .locationQRCode p {
+    max-width: 80%;
+    margin: 10px auto;
+    margin-bottom: 0;
+    width: 600px;
+    text-align: center;
   }
-}
 
-.money img {
+  .locationQRCode img {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+  }
 
-  border-radius: 10px;
-  width:100px;
-}
+  .rightrsvp {
 
-.locationQRCode {
-  background-color: #ffffff;
-  padding: 40px;
-  padding-top: 20px;
+    text-align: center;
+    padding-right: 10%;
+    margin-left: 0%;
+  }
 
-}
+  .rightrsvp img {
+    width: 100px;
+    margin: auto;
+  }
 
-.locationQRCode p {
-  max-width: 80%;
-  margin: 20px auto;
- 
-  width: 500px;
-  text-align: center;
-}
-
-.locationQRCode img {
-  display: block;
-  margin: auto 20px;
-  max-width: 300px;
-  border-radius: 10px;
-}
-
-.rightrsvp {
-  
-  text-align: center;
-  padding-right: 10%;
-  margin-left: 20%;
-}
-.rightrsvp img{
-  width: 800px;
-  margin: auto;
-}
-.rightrsvp h1,
-.rightrsvp p {
-  text-align: center;
-  margin: auto;
-  width: 100%;
-}
+  .rightrsvp h1,
+  .rightrsvp p {
+    text-align: center;
+    margin-left: 7%;
+    width: 100%;
+  }
 }

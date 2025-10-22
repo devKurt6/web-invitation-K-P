@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const textElement = document.querySelector(".typing");
 const resetBtn = document.getElementById("open-btn");
 
-const phrases = ["Hello!","Welcome", "We're getting married", "Kurt & Paola"];
+const phrases = ["Hello!","Welcome!", "We're getting married!", "Kurt & Paola"];
 let currentPhraseIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
